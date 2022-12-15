@@ -1,5 +1,9 @@
 'use strict';
 
+const header = document.querySelector('.col-1');
+const imgHolder = document.createElement('div');
+header.appendChild(imgHolder);
+imgHolder.classList.add('img-holder');
 // State object keeps track of the application state (all available products and current state of the user's cart)
 const state = {
   allProducts: [],
@@ -59,7 +63,7 @@ function generateCatalog() {
   let dragon = new Product('assets/dragon.jpg', 'Dragon');
   let pen = new Product('assets/pen.jpg', 'Pen');
   let petSweep = new Product('assets/pet-sweep.jpg', 'Pet Sweep');
-  let scissors = new Product('assets/scissors.jpg', 'Scissors');
+  let scissors = new Product('assets/scissors.jpg', 'Scissor');
   let shark = new Product('assets/shark.jpg', 'Shark');
   let sweep = new Product('assets/sweep.png', 'Sweep');
   let tauntaun = new Product('assets/tauntaun.jpg', 'Taun-Taun');
@@ -67,6 +71,12 @@ function generateCatalog() {
   let waterCan = new Product('assets/water-can.jpg', 'Water Can');
   let wineGlass = new Product('assets/wine-glass.jpg', 'Wine Glass');
   state.allProducts.push(bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, waterCan, wineGlass);
+  for (let product of state.allProducts) {
+    let productImg = document.createElement('img');
+    productImg.classList.add('product-img');
+    productImg.src = product.filePath;
+    imgHolder.appendChild(productImg);
+  }
 }
 
 // Initialize the app by creating the big list of products with images and names
