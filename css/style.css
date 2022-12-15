@@ -1,1 +1,68 @@
 /* TODO: Make it awesome */
+body {
+  background-color: hsla(30, 95%, 75%, .5);
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 5px;
+}
+
+ul {
+ position: absolute;
+ top: 5px;
+ font-size: 1.5rem;
+}
+
+a {color: hsla(210, 95%, 65%, 1);}
+
+li {
+  display: inline;
+}
+
+footer {
+  text-align: center;
+  height: 3vh;
+  color: hsla(210, 95%, 75%, 1);
+}
+
+th {
+  border: 3px solid hsla(210, 95%, 75%, 1);
+}
+
+th {
+  background-color: rgba(131, 191, 252, 0.482);
+}
+
+td {
+  padding: 2px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: hsla(30, 95%, 75%, .5);
+}
+
+table {
+  border: 3px solid hsla(210, 95%, 75%, 1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 50%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#cart-container {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+}
+
+.removeBtn {
+  color: rgb(224, 13, 13);
+  font-weight: 900;
+}
+
+.removeBtn:hover {
+  box-shadow: 0 0 3px rgb(0, 0, 0);
+}
