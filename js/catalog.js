@@ -58,6 +58,7 @@ function updateCartPreview() {
   let qtySelection = qtyElement.value;
   // TODO: Add a new element to the cartContents div with that information
   let newCartContent = document.createElement('div');
+  newCartContent.classList.add('cart-card')
   newCartContent.innerText = `${qtySelection} ${itemSelection}`;
   cartContents.appendChild(newCartContent);
 }
