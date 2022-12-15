@@ -22,6 +22,7 @@ a {color: hsla(210, 95%, 65%, 1);}
   border: 2px black solid;
   transition: .2s;
   transition: height width 2s;
+  cursor: pointer;
 }
 
 .product-img:hover {
