@@ -75,11 +75,12 @@ populateForm();
 
 
 const header = document.querySelector('.col-1');
-  const imgHolder = document.createElement('div');
-  header.appendChild(imgHolder);
-  imgHolder.classList.add('img-holder');
-  for (let product of state.allProducts) {
-    let productImg = document.createElement('img');
-    productImg.classList.add('product-img');
-    productImg.src = product.filePath;
-    imgHolder.appendChild(productImg);
+const imgHolder = document.createElement('div');
+header.appendChild(imgHolder);
+imgHolder.classList.add('img-holder');
+for (let product of state.allProducts) {
+  let productImg = document.createElement('img');
+  productImg.classList.add('product-img');
+  productImg.src = product.filePath;
+  imgHolder.appendChild(productImg);
+}

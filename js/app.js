@@ -69,7 +69,7 @@ function generateCatalog() {
   let wineGlass = new Product('assets/wine-glass.jpg', 'Wine Glass');
   state.allProducts.push(bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, waterCan, wineGlass);
   
-  }
+}
 
 // Initialize the app by creating the big list of products with images and names
 generateCatalog();
