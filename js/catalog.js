@@ -83,4 +83,7 @@ for (let product of state.allProducts) {
   productImg.classList.add('product-img');
   productImg.src = product.filePath;
   imgHolder.appendChild(productImg);
+  productImg.addEventListener('click', (e) => {
+    event.target.classList.toggle('big');
+  });
 }
