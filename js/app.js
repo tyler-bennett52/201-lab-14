@@ -1,9 +1,6 @@
 'use strict';
 
-const header = document.querySelector('.col-1');
-const imgHolder = document.createElement('div');
-header.appendChild(imgHolder);
-imgHolder.classList.add('img-holder');
+
 // State object keeps track of the application state (all available products and current state of the user's cart)
 const state = {
   allProducts: [],
@@ -71,11 +68,7 @@ function generateCatalog() {
   let waterCan = new Product('assets/water-can.jpg', 'Water Can');
   let wineGlass = new Product('assets/wine-glass.jpg', 'Wine Glass');
   state.allProducts.push(bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, waterCan, wineGlass);
-  for (let product of state.allProducts) {
-    let productImg = document.createElement('img');
-    productImg.classList.add('product-img');
-    productImg.src = product.filePath;
-    imgHolder.appendChild(productImg);
+  
   }
 }
 
