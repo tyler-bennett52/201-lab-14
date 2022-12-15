@@ -3,6 +3,7 @@
 const selectElement = document.getElementById('items');
 const qtyElement = document.querySelector('#quantity');
 const itemCount = document.querySelector('#itemCount');
+const cartContents = document.querySelector('#cartContents');
 
 // Set up an empty cart for use on this page.
 state.cart = new Cart([]);
@@ -46,14 +47,19 @@ function addSelectedItemToCart() {
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() { 
+function updateCounter() {
   itemCount.innerText = ` - ${state.cart.items.length} items in cart`;
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
+  let itemSelection = selectElement.value;
+  let qtySelection = qtyElement.value;
   // TODO: Add a new element to the cartContents div with that information
+  let newCartContent = document.createElement('div');
+  newCartContent.innerText = `${qtySelection} ${itemSelection}s`;
+  cartContents.appendChild(newCartContent);
 }
 
 // Set up the "submit" event listener on the form.

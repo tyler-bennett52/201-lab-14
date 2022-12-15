@@ -59,7 +59,7 @@ function generateCatalog() {
   let dragon = new Product('assets/dragon.jpg', 'Dragon');
   let pen = new Product('assets/pen.jpg', 'Pen');
   let petSweep = new Product('assets/pet-sweep.jpg', 'Pet Sweep');
-  let scissors = new Product('assets/scissors.jpg', 'Scissors');
+  let scissors = new Product('assets/scissors.jpg', 'Scissor');
   let shark = new Product('assets/shark.jpg', 'Shark');
   let sweep = new Product('assets/sweep.png', 'Sweep');
   let tauntaun = new Product('assets/tauntaun.jpg', 'Taun-Taun');
