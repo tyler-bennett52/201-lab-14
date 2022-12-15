@@ -37,6 +37,7 @@ function showCart() {
     tableBody.appendChild(rowElem);
     // TODO: Create a TD for the delete link, quantity,  and the item
     let xElem = document.createElement('td');
+    xElem.className = 'removeBtn';
     xElem.innerText = 'X';
     rowElem.appendChild(xElem);
     let quantElem = document.createElement('td');
@@ -54,8 +55,18 @@ function showCart() {
 function removeItemFromCart(event) {
 
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
+  let itemClicked = event.target;
+  console.log(itemClicked);
+  if(itemClicked.className === 'removeBtn'){
+    let parent = itemClicked.parentElement.lastChild.innerText;
+    console.log(parent);
+    state.cart.removeItem(parent);
+  }
+  
   // TODO: Save the cart back to local storage
+  state.cart.saveToLocalStorage();
   // TODO: Re-draw the cart table
+  renderCart();
 
 }
 
