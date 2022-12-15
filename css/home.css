@@ -21,6 +21,7 @@ a {color: hsla(210, 95%, 65%, 1);}
   height: 125px;
   border: 2px black solid;
   transition: .2s;
+  transition: height width 2s;
 }
 
 .product-img:hover {
@@ -35,6 +36,11 @@ a {color: hsla(210, 95%, 65%, 1);}
   margin: 0 25px;
   justify-content: center;
   gap: 3px;
+}
+
+.big {
+  height: 250px;
+  width: 250px;
 }
 
 li {
